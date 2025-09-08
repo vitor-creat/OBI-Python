@@ -64,6 +64,14 @@ mensagemEnviada = input("")
 letrasAlfabeto = list(quantidadeChar)
 letrasMensagem = list (mensagemEnviada)
 
+pode = True
+for letras in mensagemEnviada:
+    if letras not in quantidadeChar:
+        pode = False
+        break
 
-for i in range(letrasAlfabeto):
-    comparacao = letrasAlfabeto[i]
+if pode == True:
+    print("S")
+else: 
+    print("N")
+
