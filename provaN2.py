@@ -116,17 +116,26 @@ for i in range(N):
 #         Matriz[i][j] = cres
 #         cres = cres + 1
 #print(Matriz)
-i = 0
-auxiliar = 0
-while (i < P):
-    comandoDanca,linha,coluna = input("De um comando L ou C seguido das linhas e colunas: ").split()
-    linha = int(linha)
-    coluna = int(coluna)
-    i+= 1
-    if comandoDanca == "C":
-     for i in range(coluna):
+# i = 0
+# auxiliar = 0
+# while (i < P):
+#     comandoDanca,linha,coluna = input("De um comando L ou C seguido das linhas e colunas: ").split()
+#     linha = int(linha)
+#     coluna = int(coluna)
+#     i+= 1
+#     if comandoDanca == "C":
+#      for i in range(coluna):
         
+x = ["1", "1", "2"]
+soma = 0
+for i in range(len(x)):
+    for j in range(len(x)):
+        if i != j:
+            valor = [int(y) for y in x]
+            soma = x[i].join(x[j])
+            print(valor, soma)
 
+            
 
 
 
