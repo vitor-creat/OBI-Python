@@ -93,17 +93,17 @@
 # .
 
 
-# N,M,
-P = 3 #input("").split()
-N = 4 #int(N)
-M = 3 #int(M)
-P = int(P)
+# # N,M,
+# P = 3 #input("").split()
+# N = 4 #int(N)
+# M = 3 #int(M)
+# P = int(P)
 
-#inline
-Matriz = []
-for i in range(N):
-    Matriz.append([int(M*i+x+1) for x in range(M)])
-# print(Matriz)
+# #inline
+# Matriz = []
+# for i in range(N):
+#     Matriz.append([int(M*i+x+1) for x in range(M)])
+# # print(Matriz)
 
 #cria uma varivel que começa no 1
 # cres = 1
@@ -125,21 +125,22 @@ for i in range(N):
 #     i+= 1
 #     if comandoDanca == "C":
 #      for i in range(coluna):
-        
-x = ["1", "1", "2"]
+
+
+
+N, Q = input("").split()
+N = int(N)
+Q = int(Q)
+D = input("")
+D = [str (i) for i in D.split()]
+catInput = int(input())
 soma = 0
-for i in range(len(x)):
-    for j in range(len(x)):
+for _ in range(catInput):
+    ordens = input("")
+    ordens = [int (i) for i in ordens.split()]
+for i in range(len(D)):
+    for j in range(len(D)):
         if i != j:
-            valor = [int(y) for y in x]
-            soma = x[i].join(x[j])
-            print(valor, soma)
-
-            
-
-
-
-
-
-
-
+            concatena = "".join([D[i],D[j]])
+            soma = int(concatena) + soma
+print(soma)
