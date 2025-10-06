@@ -127,20 +127,14 @@
 #      for i in range(coluna):
 
 
+N, Q = map(int, input().split())
+D = list(map(int, input().split()))
 
-N, Q = input("").split()
-N = int(N)
-Q = int(Q)
-D = input("")
-D = [str (i) for i in D.split()]
-catInput = int(input())
-soma = 0
-for _ in range(catInput):
-    ordens = input("")
-    ordens = [int (i) for i in ordens.split()]
-for i in range(len(D)):
-    for j in range(len(D)):
-        if i != j:
-            concatena = "".join([D[i],D[j]])
-            soma = int(concatena) + soma
-print(soma)
+for _ in range(Q):
+    l, r = map(int, input().split())
+    l -= 1
+    r -= 1
+    soma = sum(D[l:r+1])
+    tam = r - l + 1
+    resp = (tam - 1) * soma * 11 
+    print(resp)
