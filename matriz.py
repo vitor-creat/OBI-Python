@@ -86,29 +86,28 @@
 
 
 
-# n, m = map(int, input().split()) 
+n, m = map(int, input().split()) 
 
-# matriz = [[0 for m in range(m)] for n in range(n)]
+matriz = [[0 for m in range(m)] for n in range(n)]
 
-# # print(matriz)
-
-# for i in range(n):
-#     for j in range(m):
-#         if(i>j):
-#             matriz[i][j] = 10 * i + j
-#         elif (j>i) or (j==i):
-#             matriz[i][j] = 0
 # print(matriz)
+
+for i in range(n):
+    for j in range(m):
+        if(i>j):
+            matriz[i][j] = 10 * i + j
+        elif (j>i) or (j==i):
+            matriz[i][j] = 0
+print(matriz)
+
 
 n, m = map(int, input().split()) 
 matriz = [[0 for m in range(m)] for n in range(n)]
 
-# for i in range(n):
-#     line = [int (x) for x in input().split()]
-#     matriz.append(line)
+for i in range(n):
+    line = [int (x) for x in input().split()]
+    matriz.append(line)
 print(matriz)
-
-
 
 for i in range(n):
     for j in range(m):
